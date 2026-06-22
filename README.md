@@ -67,7 +67,7 @@ Static deploy repo for Joseph review — **not** production WordPress.
 
 1. Import GitHub repo `seant15/uni-c-taskmonster-lp-062026`
 2. Framework preset: **Other** (static)
-3. Build command: `npm run build` (regenerates `lp1`–`lp4` from `web/preview/`)
+3. Build command: `npm run build` (regenerates `lp1`–`lp4` from `web/preview/` via Node — Vercel-compatible)
 4. Output directory: `.` (repo root)
 5. Deploy — no env vars required
 
