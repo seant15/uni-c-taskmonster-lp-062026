@@ -1,0 +1,39 @@
+slug: negotiate-quote
+url: /contractor-help/negotiate-quote
+build_priority: 3
+status: copy_ready
+
+seo:
+  title: "Contractor Quote Too High? Negotiation Help — $9.99 | Task Monsters"
+  meta: "Renovation quote feel high? Talk to someone who's negotiated 100+ bids on live video. $9.99 per call — no subscription. One call, real answers."
+  h1: "Contractor quote feel too high? Get a negotiation coach on the phone."
+  primary_keyword: home renovation estimate
+  secondary_keywords:
+    - remodeling quote
+    - estimate for kitchen remodel
+    - how to negotiate price with contractor
+  schema:
+    - FAQPage
+    - SoftwareApplication
+
+sections:
+  - hero
+  - stat_strip
+  - problem
+  - how_it_works
+  - comparison_table
+  - before_after
+  - lead_gate
+  - trust_strip
+  - faq
+  - cta_band
+
+conversion:
+  primary_cta: "Get the app — $9.99 per call"
+  secondary_cta: "Get the quote red flags guide"
+  lead_magnet: "Contractor Quote Red Flags: 10 line items that inflate your estimate"
+
+trust_rule:
+  tm_trust_strip: 1
+  tm_stat_strip: 1
+  tm_compare_table: 1

@@ -1,0 +1,41 @@
+# Task Monsters — SEO rules (Route 5)
+
+global:
+  site_name: Task Monsters
+  site_url: https://gettaskmonsters.com
+  brand_suffix: " | Task Monsters"
+  meta_length_min: 140
+  meta_length_max: 160
+  h1_count: 1
+
+trust:
+  required_strip_classes:
+    - tm-trust-strip
+  required_copy:
+    - "$9.99"
+    - "no subscription"
+  privacy_claim: "Verify with Joseph before publish"
+
+schema_defaults:
+  organization:
+    type: Organization
+    name: Task Monsters
+    url: https://gettaskmonsters.com
+  software:
+    type: SoftwareApplication
+    operatingSystem: iOS, Android
+    offers:
+      price: "9.99"
+      priceCurrency: USD
+
+internal_links:
+  hub: /
+  cross_links:
+    electrical_to_smart_home: "C-wire and transformer issues overlap — link from LP #4 FAQ to LP #1"
+    smart_home_to_electrical: "Link transformer/breaker FAQ to LP #1"
+
+tracking_events:
+  - email_capture
+  - app_store_click
+  - play_store_click
+  - scroll_75

@@ -1,0 +1,43 @@
+slug: setup-stuck
+url: /smart-home-help/setup-stuck
+build_priority: 4
+status: copy_ready
+
+seo:
+  title: "Ring or Nest Setup Stuck? Live Help on Video — $9.99 | Task Monsters"
+  meta: "Ring doorbell not working or Nest setup failed? See your exact wires on live video. $9.99 per call — no subscription. Before you pay $200 for pro install."
+  h1: "Ring or Nest setup stuck? See your exact wires on live video."
+  primary_keyword: ring doorbell not working
+  secondary_keywords:
+    - nest thermostat wiring
+    - how to set up ring doorbell
+    - smart thermostat installation
+  schema:
+    - FAQPage
+    - SoftwareApplication
+
+sections:
+  - hero
+  - stat_strip
+  - problem
+  - how_it_works
+  - comparison_table
+  - scope_honesty
+  - before_after
+  - lead_gate
+  - trust_strip
+  - faq
+  - cta_band
+
+conversion:
+  primary_cta: "Get the app — $9.99 per call"
+  secondary_cta: "Get the setup-stuck checklist"
+  lead_magnet: "Setup Stuck? 8 Checks Before You Pay for Pro Installation"
+
+trust_rule:
+  tm_trust_strip: 1
+  tm_stat_strip: 1
+  tm_compare_table: 1
+
+honesty:
+  not_certified: "Not Ring/Nest certified for every SKU — live video walkthrough for YOUR install"

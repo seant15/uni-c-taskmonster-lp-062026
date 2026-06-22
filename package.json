@@ -1,0 +1,9 @@
+{
+  "name": "uni-c-taskmonster-lp-062026",
+  "private": true,
+  "description": "Task Monsters Growth Pack LP previews — Vercel static deploy",
+  "scripts": {
+    "build": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-vercel-pages.ps1",
+    "build:check": "npm run build && echo Build OK"
+  }
+}

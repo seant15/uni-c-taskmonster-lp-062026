@@ -1,0 +1,45 @@
+slug: circuit-breaker-tripping
+url: /electrical-help/circuit-breaker-tripping
+build_priority: 1
+status: copy_ready
+
+seo:
+  title: "Circuit Breaker Keeps Tripping? Show Your Panel on Live Video — $9.99 | Task Monsters"
+  meta: "Breaker keeps tripping? After YouTube and AI still fail, get rescued on live video with a Subject Matter Expert. $9.99 per call — no subscription. Show YOUR panel."
+  h1: "Circuit breaker keeps tripping? Show your panel on live video — stop guessing."
+  primary_keyword: circuit breaker keeps tripping
+  secondary_keywords:
+    - breaker keeps tripping
+    - how to fix a breaker that keeps tripping
+    - arc fault breaker tripping
+  schema:
+    - FAQPage
+    - SoftwareApplication
+
+sections:
+  - hero
+  - stat_strip
+  - problem
+  - how_it_works
+  - scope_safety
+  - before_after
+  - lead_gate
+  - trust_strip
+  - faq
+  - cta_band
+
+conversion:
+  primary_cta: "Get the app — $9.99 per call"
+  secondary_cta: "Get the free breaker checklist"
+  lead_magnet: "5 Reasons Your Breaker Keeps Tripping (and which ones you can fix yourself)"
+  how_it_works:
+    step_1: "Choose your trade — Electrical"
+    step_2: "Choose your topic — Circuit breaker keeps tripping"
+    step_3: "Choose a Helper (Subject Matter Expert) — rescued on live video"
+  positioning: rescue_app_after_youtube_ai
+
+joseph_qa: ops/JOSEPH-CONCEPTUAL-REQUIREMENTS.md
+
+trust_rule:
+  tm_trust_strip: 1
+  tm_stat_strip: 1

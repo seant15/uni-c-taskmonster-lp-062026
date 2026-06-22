@@ -1,0 +1,37 @@
+slug: fix-leak-under-sink
+url: /plumbing-help/fix-leak-under-sink
+build_priority: 2
+status: copy_ready
+
+seo:
+  title: "Leak Under the Sink? Live Plumber on Video — $9.99 | Task Monsters"
+  meta: "Active drip under the sink? Get a plumber on live video before it gets worse. $9.99 per call, no subscription. Your pipes — not a generic tutorial."
+  h1: "Leak under the sink? See exactly what to do — on live video."
+  primary_keyword: how to fix a leak under the sink
+  secondary_keywords:
+    - how to fix leaking pipe
+    - how to stop a leaking pipe
+    - how to fix a leaking pipe joint
+  schema:
+    - FAQPage
+    - SoftwareApplication
+
+sections:
+  - hero
+  - stat_strip
+  - problem
+  - how_it_works
+  - before_after
+  - lead_gate
+  - trust_strip
+  - faq
+  - cta_band
+
+conversion:
+  primary_cta: "Get the app — $9.99 per call"
+  secondary_cta: "Get the under-sink leak checklist"
+  lead_magnet: "Under-Sink Leak Checklist: 7 things to check before you call a pro"
+
+trust_rule:
+  tm_trust_strip: 1
+  tm_stat_strip: 1

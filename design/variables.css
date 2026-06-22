@@ -1,0 +1,33 @@
+/* Task Monsters — from gettaskmonsters.com style.css (Jun 2026) */
+:root {
+  --tm-blue-500: #007aff;
+  --tm-blue-400: #3d9bff;
+  --tm-blue-300: #c1eafa;
+  --tm-blue-100: #e8f4ff;
+  --tm-white: #ffffff;
+  --tm-grey-50: #f6f6f6;
+  --tm-grey-100: #f6fafb;
+  --tm-grey-200: #eeeeee;
+  --tm-grey-800: #383838;
+  --tm-grey-900: #333333;
+  --tm-black: #1d1d1d;
+  --tm-safe-green: #28a745;
+  --tm-safe-amber: #ffc107;
+  --tm-safe-red: #dc3545;
+  --tm-text-primary: #333333;
+  --tm-text-heading: #383838;
+  --tm-text-on-blue: #ffffff;
+  --tm-text-muted: #868e96;
+  --tm-font-display: "Lato", sans-serif;
+  --tm-font-body: "Lato", sans-serif;
+  --tm-gradient-hero: linear-gradient(to bottom, #007aff 0%, #c1eafa 100%);
+  --tm-section-y: 120px;
+  --tm-section-y-tablet: 80px;
+  --tm-section-y-mobile: 70px;
+  --tm-container: 1140px;
+  --tm-gutter: 15px;
+  --tm-radius-button: 30px;
+  --tm-sticky-cta-h: 56px;
+  --tm-motion-ui: 0.4s ease-in-out;
+  --tm-motion-reveal: 0.5s ease;
+}

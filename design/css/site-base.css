@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Raleway:300,400,500,600,700,800");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--tm-font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--tm-text-primary);
+  background: var(--tm-white);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+body.has-sticky-cta {
+  padding-bottom: var(--tm-sticky-cta-h);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--tm-blue-500);
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 0.5em;
+  font-family: var(--tm-font-display);
+  color: var(--tm-text-heading);
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}

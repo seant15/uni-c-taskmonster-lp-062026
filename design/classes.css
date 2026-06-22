@@ -1,0 +1,295 @@
+/*
+ * Task Monsters semantic classes — aligned to gettaskmonsters.com
+ * Prefix: tm-* | Source: live style.css audit
+ */
+
+.tm-container {
+  width: min(100% - var(--tm-gutter) * 2, var(--tm-container));
+  margin-inline: auto;
+  padding-inline: var(--tm-gutter);
+}
+
+.tm-section {
+  padding-block: var(--tm-section-y);
+}
+
+@media (max-width: 991px) {
+  .tm-section {
+    padding-block: var(--tm-section-y-tablet);
+  }
+}
+
+@media (max-width: 767px) {
+  .tm-section {
+    padding-block: var(--tm-section-y-mobile);
+  }
+}
+
+/* ── Typography (live site patterns) ── */
+.tm-meta {
+  font-family: var(--tm-font-body);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--tm-blue-500);
+}
+
+.tm-hero-h1 {
+  font-family: var(--tm-font-display);
+  font-size: clamp(25px, 4.5vw, 45px);
+  line-height: 1.22;
+  font-weight: 800;
+  color: var(--tm-text-on-blue);
+  text-transform: capitalize;
+}
+
+.tm-hero-h2-price {
+  font-family: var(--tm-font-display);
+  font-size: clamp(22px, 3vw, 30px);
+  line-height: 1.3;
+  font-weight: 800;
+  color: var(--tm-text-on-blue);
+  text-transform: uppercase;
+  margin-top: 12px;
+}
+
+.tm-section-h2 {
+  font-family: var(--tm-font-display);
+  font-size: clamp(26px, 3.5vw, 34px);
+  line-height: 1.12;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--tm-text-heading);
+  margin-bottom: 20px;
+}
+
+.tm-body-lead {
+  font-size: 18px;
+  line-height: 1.45;
+  color: var(--tm-text-on-blue);
+}
+
+.tm-section--light .tm-body-lead,
+.tm-section .tm-body-lead--dark {
+  color: var(--tm-text-primary);
+}
+
+/* ── CTAs — match .download-buttons .button ── */
+.tm-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 30px;
+  border: 2px solid var(--tm-white);
+  border-radius: var(--tm-radius-button);
+  background: var(--tm-white);
+  color: #222222;
+  font-family: var(--tm-font-body);
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--tm-motion-ui), color var(--tm-motion-ui), border-color var(--tm-motion-ui);
+}
+
+.tm-btn-primary i,
+.tm-btn-primary .tm-btn-icon {
+  color: var(--tm-blue-500);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.tm-btn-primary:hover {
+  background: #222222;
+  border-color: #222222;
+  color: var(--tm-white);
+}
+
+.tm-btn-primary:hover i,
+.tm-btn-primary:hover .tm-btn-icon {
+  color: var(--tm-white);
+}
+
+.tm-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border: 2px solid var(--tm-white);
+  border-radius: var(--tm-radius-button);
+  background: transparent;
+  color: var(--tm-text-on-blue);
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--tm-motion-ui), color var(--tm-motion-ui);
+}
+
+.tm-btn-ghost:hover {
+  background: var(--tm-white);
+  color: var(--tm-blue-500);
+}
+
+.tm-btn-blue {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border: none;
+  border-radius: var(--tm-radius-button);
+  background: var(--tm-blue-500);
+  color: var(--tm-white);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--tm-motion-ui);
+}
+
+.tm-btn-blue:hover {
+  background: #0066d6;
+}
+
+/* ── Stat strip — brand blue band ── */
+.tm-stat-strip {
+  background: var(--tm-blue-500);
+  color: var(--tm-text-on-blue);
+  padding: 40px 0;
+}
+
+.tm-stat-val {
+  font-family: var(--tm-font-display);
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.tm-stat-label {
+  font-size: 15px;
+  opacity: 0.9;
+  margin-top: 6px;
+}
+
+/* ── Cards ── */
+.tm-card {
+  background: var(--tm-white);
+  border: 1px solid var(--tm-grey-200);
+  border-radius: 4px;
+  padding: 28px 24px;
+}
+
+.tm-story-card {
+  background: var(--tm-blue-100);
+  border-radius: 4px;
+  padding: 32px;
+}
+
+.tm-trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 32px;
+  justify-content: center;
+  padding: 28px 24px;
+  background: var(--tm-grey-50);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--tm-text-heading);
+}
+
+.tm-trust-strip span::before {
+  content: "✓ ";
+  color: var(--tm-blue-500);
+}
+
+.tm-tag-safe { color: var(--tm-safe-green); font-weight: 700; }
+.tm-tag-caution { color: var(--tm-safe-amber); font-weight: 700; }
+.tm-tag-pro { color: var(--tm-safe-red); font-weight: 700; }
+
+.tm-lead-gate {
+  background: var(--tm-blue-500);
+  color: var(--tm-text-on-blue);
+  border-radius: 4px;
+  padding: 48px 32px;
+}
+
+.tm-lead-gate input[type="email"] {
+  padding: 14px 18px;
+  border: 1px solid var(--tm-grey-200);
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: var(--tm-font-body);
+}
+
+.tm-cta-band {
+  padding: 80px 0;
+  background: var(--tm-gradient-hero);
+  color: var(--tm-text-on-blue);
+  text-align: center;
+}
+
+.tm-sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--tm-sticky-cta-h);
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--tm-white);
+  border-top: 1px solid var(--tm-grey-200);
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.06);
+  z-index: 100;
+}
+
+.tm-sticky-cta .tm-btn-blue {
+  width: 100%;
+  max-width: 400px;
+}
+
+.tm-faq details {
+  border-bottom: 1px solid var(--tm-grey-200);
+  padding: 18px 0;
+}
+
+.tm-faq summary {
+  font-weight: 700;
+  color: var(--tm-text-heading);
+  cursor: pointer;
+}
+
+.tm-a {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity var(--tm-motion-reveal), transform var(--tm-motion-reveal);
+}
+
+.tm-a.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.tm-section--grey {
+  background: var(--tm-grey-50);
+}
+
+.tm-section--dark {
+  background: var(--tm-black);
+  color: var(--tm-text-on-blue);
+}
+
+.tm-section--dark .tm-section-h2 {
+  color: var(--tm-text-on-blue);
+}
+
+.tm-c-blue {
+  color: var(--tm-blue-500);
+}
