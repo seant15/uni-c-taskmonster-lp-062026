@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 /**
- * Sync web/preview HTML → lp1–lp4 for Vercel static deploy.
- * Cross-platform (Node) — use on Vercel build; PowerShell variant for local Windows.
+ * Assemble static site into public/ for Vercel deploy.
+ * Source: web/preview/*.html + design/ + web/assets|app_screenshots|quiz
  */
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
-import { dirname, join } from 'node:path';
+import { cpSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
+const out = join(root, 'public');
 
 const map = {
   lp1: 'lp-01-circuit-breaker-tripping.html',
@@ -24,14 +25,23 @@ function convertPreviewHtml(html) {
     .replace(/\.\.\/quiz\//g, '../web/quiz/');
 }
 
+rmSync(out, { recursive: true, force: true });
+mkdirSync(out, { recursive: true });
+
+cpSync(join(root, 'index.html'), join(out, 'index.html'));
+cpSync(join(root, 'design'), join(out, 'design'), { recursive: true });
+mkdirSync(join(out, 'web'), { recursive: true });
+cpSync(join(root, 'web', 'assets'), join(out, 'web', 'assets'), { recursive: true });
+cpSync(join(root, 'web', 'app_screenshots'), join(out, 'web', 'app_screenshots'), { recursive: true });
+cpSync(join(root, 'web', 'quiz'), join(out, 'web', 'quiz'), { recursive: true });
+
 for (const [slug, filename] of Object.entries(map)) {
   const src = join(root, 'web', 'preview', filename);
-  const destDir = join(root, slug);
-  const dest = join(destDir, 'index.html');
+  const destDir = join(out, slug);
   mkdirSync(destDir, { recursive: true });
   const html = readFileSync(src, 'utf8');
-  writeFileSync(dest, convertPreviewHtml(html), 'utf8');
-  console.log(`Built ${slug}/index.html from ${filename}`);
+  writeFileSync(join(destDir, 'index.html'), convertPreviewHtml(html), 'utf8');
+  console.log(`Built public/${slug}/index.html from ${filename}`);
 }
 
-console.log('Done. Routes: /lp1 /lp2 /lp3 /lp4');
+console.log('Done. Vercel output: public/ → /lp1 /lp2 /lp3 /lp4');
