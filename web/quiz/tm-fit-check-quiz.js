@@ -215,14 +215,14 @@
     if (result.tier === 'great') {
       return {
         title: 'Strong match — Task Monsters fits',
-        body: 'You\'ve done the research. You need someone with experience to see YOUR setup on live video — that\'s exactly what the rescue app does. Choose ' + (cfg.lpTrade || 'your trade') + ' → ' + (cfg.lpTopic || 'your topic') + ' → a Helper. $9.99, once.',
+        body: 'You\'ve done the research. You need a Subject Matter Expert to see YOUR setup on live video — that\'s exactly what the rescue app does. Choose ' + (cfg.lpTrade || 'your trade') + ' → ' + (cfg.lpTopic || 'your topic') + ' → a Subject Matter Expert. $9.99, once.',
         ring: 'great'
       };
     }
     if (result.tier === 'good') {
       return {
         title: 'Worth a try',
-        body: 'Task Monsters could help — especially if you can show the problem on video. Download free; pay $9.99 only when you connect with a Helper.',
+        body: 'Task Monsters could help — especially if you can show the problem on video. Download free; pay $9.99 only when you connect with a Subject Matter Expert.',
         ring: 'good'
       };
     }
@@ -404,27 +404,53 @@
     }
 
     if (!result.hard) {
+      var site = window.TM_SITE_CONFIG || {};
+      var contactEmail = site.contactEmail || 'customersupport@gettaskmonsters.com';
       var emailBlock = el('div', 'tm-quiz__email-opt');
       emailBlock.innerHTML = '<label for="quiz-email">Optional — email my result &amp; rescue tips</label>';
       var row = el('div', 'tm-quiz__email-row');
       var input = el('input');
       input.type = 'email';
       input.id = 'quiz-email';
+      input.name = 'email';
       input.placeholder = 'you@email.com';
       input.autocomplete = 'email';
       var sub = el('button', 'tm-btn-blue', 'Send');
       sub.type = 'button';
       sub.addEventListener('click', function () {
-        if (input.value && window.dataLayer) {
-          window.dataLayer.push({ event: 'quiz_email_capture', tier: result.tier });
+        var email = (input.value || '').trim();
+        if (!email) return;
+        var payload = {
+          email: email,
+          source: 'fit_check_quiz',
+          lp_id: cfg.lpId || '',
+          lp_trade: cfg.lpTrade || '',
+          tier: result.tier,
+          score: result.score,
+          contact_routing: contactEmail
+        };
+        if (window.dataLayer) {
+          window.dataLayer.push({
+            event: 'quiz_email_capture',
+            tier: result.tier,
+            contact_email: contactEmail
+          });
+        }
+        if (site.ghlWebhookUrl) {
+          fetch(site.ghlWebhookUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          }).catch(function () { /* GHL retry handled in ops */ });
         }
         sub.textContent = 'Thanks!';
         sub.disabled = true;
+        input.disabled = true;
       });
       row.appendChild(input);
       row.appendChild(sub);
       emailBlock.appendChild(row);
-      emailBlock.appendChild(el('p', 'tm-quiz__fine', 'Web only — not part of the app. Unsubscribe anytime.'));
+      emailBlock.appendChild(el('p', 'tm-quiz__fine', 'Web only — not part of the app. Routed to ' + contactEmail + '. Unsubscribe anytime.'));
       card.appendChild(emailBlock);
     }
 
