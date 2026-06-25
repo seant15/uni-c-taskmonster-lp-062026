@@ -81,3 +81,62 @@ Opportunity score weights:
 ## Ring/Nest — demote, don't delete
 
 Keep smart-home as **blog + FAQ satellite** (`ring doorbell not working` 1,900/mo LOW) linking from electrical LP #1 (transformer/C-wire overlap), not a full Growth Pack LP unless Joseph adds a real case.
+
+---
+
+## Joseph WiFi lane — Keyword Planner (2026-06-22)
+
+Brand owner proposed **WiFi fixing** as LP #4 angle. We ran a dedicated Planner pull (same geo/network as above). This is not ignored — it reframes LP #4 rather than replacing data-driven volume work entirely.
+
+### Pure home WiFi troubleshooting (DIY intent)
+
+| Keyword | Avg monthly searches | Competition | Live-video fit |
+| --- | --- | --- | --- |
+| wifi connected but no internet | 5,400 | LOW (ci 8) | Strong — router lights, modem, app screens |
+| wifi not working | 4,400 | LOW (ci 3) | Strong |
+| why is my wifi so slow | 4,400 | LOW (ci 6) | Moderate |
+| why is my internet so slow | 9,900 | LOW (ci 7) | Moderate — broader than device setup |
+| wifi keeps disconnecting | 1,900 | LOW (ci 2) | Strong |
+| wifi troubleshooting | 1,600 | LOW (ci 11) | Broad |
+| wifi extender not working | 320 | LOW (ci 1) | Strong |
+| device won't connect to wifi | 90 | LOW (ci 1) | Exact pain — tiny volume |
+
+### WiFi × smart home (Joseph's Ring/Nest world)
+
+| Keyword | Avg monthly searches | Competition | Note |
+| --- | --- | --- | --- |
+| ring doorbell wifi extender | 12,100 | LOW (ci 14) | Best bridge: WiFi + doorbell — 6× `ring doorbell not working` |
+| ring doorbell wifi | 390 | HIGH (ci 100) | Too branded/shopping |
+| nest thermostat wifi | 720 | HIGH (ci 100) | Branded |
+| camera won't connect to wifi | (long-tail cluster) | — | Fits LP4 problem copy, low exact volume |
+
+### WiFi — skip (wrong intent)
+
+| Keyword | Why skip |
+| --- | --- |
+| cox / xfinity / spectrum wifi not working | ISP support intent — user wants provider fix |
+| eero setup / mesh wifi setup | Product setup docs; mesh ci 79–95 |
+| hp printer not connecting to wifi | Device-specific; weak Task Monsters trade fit unless Computer topic expands |
+
+### WiFi vs other LP #4 candidates
+
+| Topic anchor | Vol/mo | LOW comp? | Joseph alignment |
+| --- | --- | --- | --- |
+| garbage disposal not working | 33,100 | MEDIUM | Low |
+| ac not blowing cold air | 22,200 | MEDIUM | Low |
+| ring doorbell wifi extender | 12,100 | LOW | **High** — WiFi + smart home |
+| wifi connected but no internet | 5,400 | LOW | **High** — pure WiFi rescue |
+| ring doorbell not working | 1,900 | LOW | Medium — current LP4 |
+| wifi not working | 4,400 | LOW | **High** |
+
+### UNI recommendation — honor Joseph without ignoring data
+
+**Reframe LP #4** (don't pick only disposal OR only Ring):
+
+- **Working title:** WiFi or smart device won't connect — Ring, Nest, cameras, mesh
+- **Primary SEO/paid hook:** `wifi connected but no internet` (5,400, LOW) + `ring doorbell wifi extender` (12,100, LOW) in body/FAQ
+- **Hero pain:** App says setup failed, device won't join WiFi, or internet works everywhere except the doorbell — show router + device on live video
+- **Keeps** Joseph's WiFi fix proposal **and** smart-home install story **and** beats Ring-only volume
+
+If Joseph insists on **WiFi-only** (no doorbell in H1): lead with `wifi connected but no internet` — still 2.8× current Ring LP anchor volume with LOW competition.
+
