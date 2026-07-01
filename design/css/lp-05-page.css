@@ -1,0 +1,246 @@
+/**
+ * LP #5 — Trade interpreter concept mockup (Joseph Jun 30 preview)
+ * Concept banner + trade card grid + SME profiles
+ */
+
+.tm-concept-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  padding: 10px 16px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #5c4a00;
+  background: #ffc107;
+  border-bottom: 2px solid rgba(92, 74, 0, 0.15);
+}
+
+body.has-concept-banner .tm-nav {
+  top: 42px;
+}
+
+body.has-concept-banner .tm-nav.is-scrolled {
+  top: 42px;
+}
+
+body.has-concept-banner .tm-hero {
+  padding-top: calc(120px + 42px);
+}
+
+@media (max-width: 767px) {
+  body.has-concept-banner .tm-hero {
+    padding-top: calc(100px + 42px);
+  }
+
+  .tm-concept-banner {
+    font-size: 11px;
+    padding: 8px 12px;
+  }
+}
+
+/* Trade interpreter cards — concept grid */
+.tm-trade-cards {
+  display: grid;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .tm-trade-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.tm-trade-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 28px 24px 24px;
+  background: var(--tm-white);
+  border: 1px solid var(--tm-grey-200);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(26, 35, 50, 0.06);
+}
+
+.tm-trade-card__hook {
+  margin: 0 0 12px;
+  font-size: clamp(20px, 2.5vw, 24px);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--tm-blue-500);
+  text-transform: none;
+}
+
+.tm-trade-card__pain {
+  flex: 1;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--tm-text-primary);
+}
+
+/* Gentle float on trade cards (respects reduced motion below) */
+@keyframes tm-trade-card-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.tm-trade-card--float.is-visible {
+  animation: tm-trade-card-float 5s ease-in-out infinite;
+  animation-delay: var(--tm-float-delay, 0s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tm-trade-card--float.is-visible {
+    animation: none;
+  }
+}
+
+/* Consolidated CTA below trade grid */
+.tm-trade-cards__cta {
+  margin-top: 40px;
+  padding: 32px 24px;
+  text-align: center;
+  background: var(--tm-blue-100);
+  border: 1px solid var(--tm-blue-300);
+  border-radius: 12px;
+}
+
+.tm-trade-cards__cta-lead {
+  margin: 0 0 20px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--tm-text-heading);
+  max-width: 36rem;
+  margin-inline: auto;
+}
+
+.tm-trade-cards__cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.tm-trade-cards__cta .tm-btn-primary {
+  border-color: var(--tm-blue-500);
+  background: var(--tm-blue-500);
+  color: var(--tm-white);
+}
+
+.tm-trade-cards__cta .tm-btn-primary .tm-btn-icon {
+  color: var(--tm-white);
+}
+
+.tm-trade-cards__cta .tm-btn-primary:hover {
+  background: #0066d6;
+  border-color: #0066d6;
+  color: var(--tm-white);
+}
+
+.tm-link-back {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.tm-link-back a {
+  font-weight: 700;
+}
+
+/* SME profile cards — concept row */
+.tm-sme-profiles {
+  display: grid;
+  gap: 20px;
+  margin: 40px auto 24px;
+  max-width: 960px;
+}
+
+@media (min-width: 768px) {
+  .tm-sme-profiles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.tm-sme-profile-card {
+  padding: 22px 20px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.tm-sme-profile-card__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.tm-sme-profile-card__avatar {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--tm-blue-500);
+  color: var(--tm-white);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.tm-sme-profile-card__name {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--tm-text-on-blue);
+  text-transform: none;
+}
+
+.tm-sme-profile-card__meta {
+  margin: 0;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.tm-sme-profile-card__stars {
+  color: #ffc107;
+  letter-spacing: 0.05em;
+}
+
+.tm-sme-profile-card__intro {
+  margin: 0 0 14px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.tm-sme-profile-card__rate {
+  margin: 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.tm-sme-profile-card__rate strong {
+  color: #7dffb0;
+  font-size: 15px;
+}
+
+.tm-sme-profiles__note {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 0 8px;
+}

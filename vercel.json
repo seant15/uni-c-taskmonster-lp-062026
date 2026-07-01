@@ -29,6 +29,7 @@
     { "source": "/lp1", "destination": "/lp1/index.html" },
     { "source": "/lp2", "destination": "/lp2/index.html" },
     { "source": "/lp3", "destination": "/lp3/index.html" },
-    { "source": "/lp4", "destination": "/lp4/index.html" }
+    { "source": "/lp4", "destination": "/lp4/index.html" },
+    { "source": "/lp5", "destination": "/lp5/index.html" }
   ]
 }

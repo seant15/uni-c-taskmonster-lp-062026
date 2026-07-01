@@ -37,7 +37,8 @@ S - Task Monsters/
 
 ## Key docs (start here)
 
-1. `ops/JOSEPH-CONCEPTUAL-REQUIREMENTS.md` — **Joseph feedback lock-in + dev QA checklist**
+1. `ops/JOSEPH-APP-CAPABILITY-LOCK.md` — **app can/cannot + legal scope (living doc)**
+2. `ops/JOSEPH-CONCEPTUAL-REQUIREMENTS.md` — **Joseph feedback lock-in + dev QA checklist**
 2. `design/LP-GOLDEN-TEMPLATE.md` — **homepage + LP #1 golden template for LPs #2–#4**
 3. `web/preview/lp-01-circuit-breaker-tripping.html` — visual reference (open locally)
 4. `web/DESIGNER-HANDOFF.md` — designer start here (constitution + wireframe)
@@ -61,24 +62,24 @@ Static deploy repo for Joseph review — **not** production WordPress.
 | `/lp1` | Circuit breaker tripping |
 | `/lp2` | Leak under sink |
 | `/lp3` | Negotiate contractor quote |
-| `/lp4` | Smart home setup stuck |
+| `/lp4` | Garbage disposal not working |
+| `/lp5` | Trade interpreter concept (Joseph mockup) |
 
 ### Deploy on Vercel
 
 1. Import GitHub repo `seant15/uni-c-taskmonster-lp-062026`
 2. Framework preset: **Other** (static)
-3. Build command: `npm run build` (regenerates `lp1`–`lp4` from `web/preview/` via Node — Vercel-compatible)
+3. Build command: `npm run build` (copies `lp1`–`lp5` into `public/`)
 4. Output directory: **`public`** (set automatically via `vercel.json`; do not use repo root)
 5. Deploy — no env vars required
 
-### Regenerate routes after editing preview HTML
+### Regenerate routes after editing LP HTML
 
 ```powershell
 npm run build
-# or: powershell -File scripts/build-vercel-pages.ps1
 ```
 
-Source of truth for page content: `web/preview/lp-0X-*.html` → built to `lpN/index.html`.
+Source of truth for page content: `lp1/` … `lp5/index.html` → built to `public/lpN/`.
 
 ## Notion references
 

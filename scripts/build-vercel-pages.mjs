@@ -10,7 +10,7 @@ import { fileURLToPath } from 'node:url';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const out = join(root, 'public');
 
-const slugs = ['lp1', 'lp2', 'lp3', 'lp4'];
+const slugs = ['lp1', 'lp2', 'lp3', 'lp4', 'lp5'];
 
 rmSync(out, { recursive: true, force: true });
 mkdirSync(out, { recursive: true });
@@ -31,4 +31,4 @@ for (const slug of slugs) {
   console.log(`Built public/${slug}/index.html from ${slug}/index.html`);
 }
 
-console.log('Done. Vercel output: public/ → /lp1 /lp2 /lp3 /lp4');
+console.log('Done. Vercel output: public/ → /lp1 /lp2 /lp3 /lp4 /lp5');

@@ -1,0 +1,24 @@
+---
+description: Task Monsters app capability, legal, and marketing scope locks — read before any LP, ad, or copy change.
+alwaysApply: true
+---
+
+# Task Monsters — capability lock (mandatory)
+
+Before editing landing pages (`lp*/`), paid ads, web copy, or client emails for Task Monsters:
+
+1. Read `ops/JOSEPH-APP-CAPABILITY-LOCK.md` (living doc — update when Joseph or dev reports new constraints).
+2. Cross-check `ops/JOSEPH-CONCEPTUAL-REQUIREMENTS.md` for copy terminology.
+
+Non-negotiable:
+
+- Subject Matter Expert only — never Expert/Professional/Helper in customer-facing hero or steps.
+- App flow: trade → topic → Subject Matter Expert → live video. Not questionnaire product.
+- **No smart home / Ring / Nest setup LP claims** until app supports minimize-and-return video (Joseph 2026-06-29).
+- $9.99 scope: guidance on video — not guaranteed fix, not on-site licensed work, not over-promised savings.
+- Licensed trade names only in RED safety blocks.
+- Joseph patent-pending wording when claiming privacy/anonymity.
+
+LP #4 build topic: garbage disposal not working (not Ring/Nest).
+
+After Joseph or Cole emails about app limits: update `ops/JOSEPH-APP-CAPABILITY-LOCK.md` change log in the same session.
